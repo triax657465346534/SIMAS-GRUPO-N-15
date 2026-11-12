@@ -1,0 +1,69 @@
+TUTORIAL: PUBLICAR S.I.M.A.S. EN GITHUB PAGES
+==============================================
+
+ANTES DE EMPEZAR
+- Necesitás una cuenta de GitHub.
+- El paquete de GitHub Pages contiene un index.html autocontenido: diseño, código, catálogo de 50 pistas e ilustraciones van en un solo archivo. No hace falta Git, Codeload ni instalar programas.
+- GitHub Pages NO ejecuta el servidor PowerShell ni retransmite por sí solo sensores entre varias computadoras. Para receptores en vivo de la misma red, seguí usando el servidor local y SIMAS_RECEPTOR.html.
+- No subas contraseñas, claves, datos privados ni información personal. El contenido publicado en GitHub Pages queda visible en Internet.
+
+1. DESCARGAR Y EXTRAER
+1) Descargá SIMAS_GITHUB_PAGES.zip.
+2) En Windows, clic derecho > Extraer todo.
+3) Abrí la carpeta extraída GITHUB_PAGES.
+4) Comprobá que el archivo index.html esté dentro de la carpeta. Todo el sitio está integrado en ese archivo.
+
+2. CREAR EL REPOSITORIO
+1) Entrá a https://github.com e iniciá sesión.
+2) Arriba a la derecha, presioná el botón + y elegí New repository.
+3) En Repository name escribí: SIMAS
+   (Si el nombre ya está ocupado en tu cuenta, usá SIMAS-web; en ese caso cambia también la URL del paso 6.)
+4) Elegí Public.
+5) Dejá activado Add a README file si aparece.
+6) Presioná Create repository.
+
+3. SUBIR LOS ARCHIVOS DEL SITIO
+1) Dentro del repositorio, presioná Add file > Upload files.
+2) Abrí en tu computadora la carpeta GITHUB_PAGES que extrajiste.
+3) Seleccioná el archivo index.html (y si querés README.md y TUTORIAL_GITHUB_PAGES.txt).
+4) Arrastrá esos archivos a la página de Upload files.
+   MUY IMPORTANTE: index.html tiene que quedar en la raíz del repositorio, no dentro de una subcarpeta.
+5) Abajo, en Commit changes, escribí: Publicar sitio SIMAS.
+6) Presioná Commit changes.
+
+4. ACTIVAR GITHUB PAGES
+1) Dentro del repositorio, entrá a Settings.
+2) En la columna izquierda buscá Pages.
+3) En Build and deployment, en Source, elegí Deploy from a branch.
+4) En Branch elegí main.
+5) En la carpeta elegí /(root).
+6) Presioná Save.
+
+5. ABRIR LA PÁGINA
+La URL de un repositorio de proyecto tendrá esta forma:
+https://TU-USUARIO.github.io/SIMAS/
+Reemplazá TU-USUARIO por tu nombre de usuario real de GitHub.
+Si elegiste SIMAS-web, la URL terminará en /SIMAS-web/.
+Volvé a Settings > Pages; cuando termine la publicación, GitHub muestra el enlace Visit site. Abrilo para comprobar el sitio.
+Puede tardar unos minutos. Si no aparece, revisá la pestaña Actions para ver si la publicación terminó correctamente.
+
+6. CREAR EL QR
+1) Abrí el sitio publicado desde Settings > Pages > Visit site.
+2) En la sección “Compartir sitio” aparecerá un QR generado con la URL pública exacta de GitHub Pages.
+3) En una computadora, hacé clic derecho sobre el QR y elegí Guardar imagen como. En un celular, mantené presionada la imagen y guardala.
+4) Probalo escaneándolo con otro teléfono. No uses http://localhost:8787 ni una IP 192.168.x.x en el QR público: esas direcciones solo funcionan localmente o dentro de la red.
+
+7. CÓMO USAR CADA PÁGINA
+- GitHub Pages (https://TU-USUARIO.github.io/SIMAS/): web pública con el diseño original y el catálogo musical. Si conectás el Arduino por USB a ESA computadora, abrí Chrome/Edge y usá Conectar Arduino.
+- Localhost (http://localhost:8787/SIMAS_EMISOR.html): consola completa del emisor en la computadora que tiene conectado el Arduino y ejecuta INICIAR_SIMAS.bat.
+- Receptores en la misma red (http://IP-DEL-EMISOR:8787/SIMAS_RECEPTOR.html): muestran solamente mediciones y alertas, sin diagnóstico ni consola.
+
+8. ACTUALIZAR MÁS ADELANTE
+Cuando modifiques index.html, catalog.json o assets, volvé al repositorio, Add file > Upload files, subí los archivos nuevos manteniendo las mismas rutas, y presioná Commit changes. GitHub Pages vuelve a publicar automáticamente desde main /(root).
+
+9. SI NO APARECE EL SITIO
+- Confirmá que index.html está en la raíz, no dentro de otra subcarpeta.
+- Confirmá que Settings > Pages dice Deploy from a branch, main, /(root).
+- Abrí Actions y revisá que el deploy de Pages haya finalizado sin errores.
+- Revisá que el repositorio sea Public si la cuenta usa GitHub Free.
+- Esperá unos minutos y recargá con Ctrl+F5.

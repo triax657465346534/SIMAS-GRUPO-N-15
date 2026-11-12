@@ -1,0 +1,3 @@
+QR DE S.I.M.A.S.
+
+El QR aparece automáticamente dentro de index.html cuando la página se abre en su URL pública de GitHub Pages. Para guardarlo: clic derecho > Guardar imagen como (computadora), o mantener presionada la imagen (celular). El código se genera usando el servicio API de goQR a partir de la URL pública que se está visitando.
